@@ -20,7 +20,7 @@ public interface GitHubClient {
      */
     @Get("/search/repositories")
     @Header(name = "Accept", value = "application/vnd.github+json")
-    @Header(name = "User-Agent", value = "aliiabdii")
+    @Header(name = "User-Agent", value = "${githubpopular.http.agent}")
     HttpResponse<GitHubSearchResult> getPopularRepositories(@NonNull @QueryValue String q,
                                                             @QueryValue String sort,
                                                             @QueryValue("per_page") int perPage,
