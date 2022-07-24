@@ -12,7 +12,7 @@ micronaut:
 
 logger:
   levels:
-    io.micronaut.http.client: DEBUG
+    io.micronaut.http.client: INFO
 
 netty:
   default:
