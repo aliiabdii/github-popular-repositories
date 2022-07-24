@@ -36,7 +36,7 @@ public class GithubService {
                 .orElseThrow();
     }
 
-    private String buildFullQueryByParameters(Map<String, String> parameters) {
+    protected String buildFullQueryByParameters(Map<String, String> parameters) {
         return parameters.entrySet().stream()
                 .map(entry -> buildQueryParam(entry.getKey(), entry.getValue()))
                 .collect(Collectors.joining(QUERY_PARAM_DELIMITER));
